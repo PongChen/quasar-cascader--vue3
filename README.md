@@ -31,7 +31,17 @@ npm run format
 ```bash
 quasar build
 ```
-
+<cascader
+      label="单位"
+      :options="data"
+      dense
+      optlabel="name"
+      optvalue="id"
+	  important
+      @change="handleDeptIdChange"
+    >
+	
+	组件提供了一个clearcascader方法来主
 ### Customize the configuration
 
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).

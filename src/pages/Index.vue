@@ -1,24 +1,24 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    />
-    <cascader
-      label="单位"
-      :options="data"
-      dense
-      optlabel="name"
-      optvalue="id"
-      @change="handleDeptIdChange"
-    >
-    </cascader>
+  <q-page>
+    <div class="row">
+      <div class="col-md-2 col-sm-12 col-xs-12">
+        <cascader
+          label="单位"
+          :options="data"
+          dense
+          optlabel="name"
+          optvalue="id"
+          @change="handleDeptIdChange"
+          width="250"
+        >
+        </cascader>
+      </div>
+    </div>
   </q-page>
 </template>
 
 <script>
-import cascader from "quasar-cascader-vue3/src";
+import cascader from "quasar-cascader-vue3";
 import { defineComponent } from "vue";
 
 export default defineComponent({
